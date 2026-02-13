@@ -1,32 +1,57 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-
+import { ImageBackground, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function HomeScreen() {
   return (
-    <View style={{backgroundColor: 'white', flex: 1, justifyContent: 'center', alignItems: 'center', gap: 12}}>
-      <Text style={{ color: '#0a55b2', fontSize: 33, fontWeight: 700}}>Entrar</Text>
-      
-      <TextInput style={{ backgroundColor: '#fff',borderWidth: 1, borderColor: '#ccc', borderRadius: 25, width: '80%', height: 45}}/>
-      
-      <TextInput style={{ backgroundColor: '#fff',borderWidth: 1, borderColor: '#ccc', borderRadius: 25, width: '80%', height: 45}}/>
+    <KeyboardAvoidingView behavior='padding' style={{ flex: 1 }}>
+      <ImageBackground source={require('../../assets/images/Login.png')} resizeMode="cover" style={{ backgroundColor: 'white', flex: 1, justifyContent: 'center', alignItems: 'center', width: '100%', paddingTop: 150 }}>
 
-      <TextInput style={{ backgroundColor: '#fff',borderWidth: 1, borderColor: '#ccc', borderRadius: 25, width: '80%', height: 45}}/>
-      <TouchableOpacity style={{ backgroundColor: '#1f1ce4',borderRadius: 25, width: '80%', height: 45, marginBottom: 10, justifyContent: 'center', alignItems: 'center', marginVertical: 10}}>
-        <Text style={{ color: '#fff', }}>Entrar</Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={{color: '#0a55b2', fontWeight: 400}}>
-          Esqueceu a senha?
-        </Text>
-      </TouchableOpacity>
-      <View  style={{justifyContent: 'center', alignItems: 'center'}}>
-        <TouchableOpacity>
-        <Text style={{color: '#0a55b2', fontWeight: 600}}>
-          Não possui uma conta? <Text style={{ color: '#258d46', }}>Criar conta</Text>
-        </Text>
+        <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%', padding: 32, marginTop: Platform.OS === 'ios' ? 20 : 50 }}>
+          <Text style={{ color: '#0a55b2', fontSize: 33, fontWeight: 700 }}>Entrar</Text>
+
+          <Text style={{ color: '#0a55b2', fontSize: 16, fontWeight: 700, marginBottom: 10, alignSelf: 'flex-start' }}>Nome</Text>
+          <TextInput
+            placeholderTextColor="#0a55b2"
+            cursorColor={'#0a55b2'}
+            selectionColor={'#0a55b2'}
+            style={{ height: 40, color: '#0a55b2', fontSize: 14, fontWeight: '500', backgroundColor: 'white', borderRadius: 50, width: '100%', padding: 8, marginBottom: 20, borderWidth: 1, borderColor: '#0a55b2' }}
+          />
+
+          <Text style={{ color: '#0a55b2', fontSize: 16, fontWeight: 700, marginBottom: 10, alignSelf: 'flex-start' }}>E-mail</Text>
+          <TextInput
+            placeholderTextColor="#0a55b2"
+            cursorColor={'#0a55b2'}
+            selectionColor={'#0a55b2'}
+            style={{ height: 40, color: '#0a55b2', fontSize: 14, fontWeight: '500', backgroundColor: 'white', borderRadius: 50, width: '100%', padding: 8, marginBottom: 20, borderWidth: 1, borderColor: '#0a55b2' }}
+          />
+
+          <Text style={{ color: '#0a55b2', fontSize: 16, fontWeight: 700, marginBottom: 10, alignSelf: 'flex-start' }}>Senha</Text>
+          <TextInput
+            placeholderTextColor="#0a55b2"
+            cursorColor={'#0a55b2'}
+            selectionColor={'#0a55b2'}
+            secureTextEntry
+            style={{ height: 40, color: '#0a55b2', fontSize: 14, fontWeight: '500', backgroundColor: 'white', borderRadius: 50, width: '100%', padding: 8, marginBottom: 30, borderWidth: 1, borderColor: '#0a55b2' }}
+          />
+
+          <TouchableOpacity activeOpacity={0.8} style={{ backgroundColor: '#0a55b2', borderRadius: 10, width: '100%', padding: 15, marginBottom: 30 }}>
+            <Text style={{ color: 'white', fontSize: 16, fontWeight: 700, textAlign: 'center' }}>Entrar</Text>
           </TouchableOpacity>
-      </View>
-    </View>
+
+          <View style={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 4 }}>
+            <TouchableOpacity>
+              <Text style={{ color: '#0a55b2', fontSize: 16, fontWeight: 500, paddingBottom: 8 }}>Esqueceu a senha?</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text style={{ color: '#0a55b2', fontSize: 16, fontWeight: 500 }}>
+                Não possui uma conta?
+                <Text style={{ color: '#207d30', fontWeight: 500 }}> Criar Conta</Text>
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+      </ImageBackground>
+    </KeyboardAvoidingView>
   );
 }
 
