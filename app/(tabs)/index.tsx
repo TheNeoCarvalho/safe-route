@@ -21,7 +21,7 @@ export default function HomeScreen() {
             placeholderTextColor="#0a55b2"
             cursorColor={'#0a55b2'}
             selectionColor={'#0a55b2'}
-            style={{ height: 40, color: '#0a55b2', fontSize: 14, fontWeight: '500', backgroundColor: 'white', borderRadius: 50, width: '100%', padding: 8, marginBottom: 20, borderWidth: 1, borderColor: '#0a55b2' }}
+            style={{ height: 40, color: '#0a55b2', fontSize: 14, fontWeight: '500', backgroundColor: 'white', borderRadius: 50, width: '100%', padding: 8, marginBottom: 20, borderWidth: 1, borderColor: '#0e1114ff' }}
           />
 
           <Text style={{ color: '#0a55b2', fontSize: 16, fontWeight: 700, marginBottom: 10, alignSelf: 'flex-start' }}>Senha</Text>
